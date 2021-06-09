@@ -29,8 +29,10 @@ function App() {
             const res = await authInstance.signIn(userCredentials.username, userCredentials.password);
             if (res['challengeName'] === "NEW_PASSWORD_REQUIRED") {
                 const {requiredAttributes} = res.challengeParam; // the array of required attributes, e.g ['email', 'phone_number']
-                const challengeRes =await authInstance.completeNewPassword(res, 'ABcD12#$%^',{
-                    email: 'm.dekmak@zeroandone.me',
+                const challengeRes = await authInstance.completeNewPassword(res, 'ABcD12#$%^', {
+                    email: 'a.bilani@zeroandone.me',
+                    name: 'mostafa',
+                    family_name: 'mostafa',
                 });
                 console.log('chalenge res : ')
                 console.log(challengeRes)
@@ -83,18 +85,18 @@ function App() {
 
 
     const [cognitoConfiguration, setCognitoConfiguration] = useState<AmplifyAuthObjectInterface>({
-        identityPoolId: '',
-        region: '',
-        userPoolId: '',
-        userPoolWebClientId: '',
+        identityPoolId: 'eu-west-1:789c9be2-6296-4701-8f69-d38a7d97327b',
+        region: 'eu-west-1',
+        userPoolId: 'eu-west-1_LakiiLygV',
+        userPoolWebClientId: '5rs1rgr4vt147pkgnlln348brb'
     })
 
     const [authInstance, setAuthInstance] = useState<any>(null);
     const [apiInstance, setApiInstance] = useState<any>(null);
 
     const [userCredentials, setUserCredentials] = useState({
-        username: '',
-        password: ''
+        username: 'm.dekmak',
+        password: 'ABcD12#$%^'
     })
 
 

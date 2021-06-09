@@ -17,10 +17,10 @@ export class AmplifyService {
             //     userPoolWebClientId: authObject.userPoolWebClientId
             // },
             Auth: {
-                identityPoolId: 'us-west-2:155340ca-4c0e-4142-8306-d24953f5174b',
-                region: 'us-west-2',
-                userPoolId: 'us-west-2_2vGrZ7YWB',
-                userPoolWebClientId: '6j7ntpt10eeqobemntjevia4nq'
+                identityPoolId: 'eu-west-1:789c9be2-6296-4701-8f69-d38a7d97327b',
+                region: 'eu-west-1',
+                userPoolId: 'eu-west-1_LakiiLygV',
+                userPoolWebClientId: '5rs1rgr4vt147pkgnlln348brb'
             },
 
             API: {
